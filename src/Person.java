@@ -1,7 +1,5 @@
-import java.util.Comparator;
 
-
-public class Person implements Comparator<Person> {
+public class Person {
 
     private String name;
     private String surname;
@@ -44,43 +42,6 @@ public class Person implements Comparator<Person> {
     public void setAge(int age) {
         this.age = age;
 
-
-    }
-
-    //@Override
-    // public int compare(Person a, Person b) {
-    // if (a.length() > b.length()) {
-    //     return -1;
-    //} else if (a.length() < b.length()) {
-    //    return 1;
-    // }
-    //  return a.compareTo(b);
-    // }
-    //if (o1.setSurname > o2.getSurname()) {
-    // } else if (o1.setSurname() < o2.getSurname()){
-    //   return 1;
-    // }
-    //return o1.compareTo(o2);
-
-    //return o1.getSurname().compareTo(o2.getSurname();
-
-    // if (o1.getSurname() < o2.setSurname());
-    // return 1;
-    //else if (s0.length() > s1.length())
-    //    return -1;
-    //return 0;
-
-    @Override
-
-    public int compare(Person o1, Person o2) {
-        if(o2.getAge() > o1.getAge()) {
-            return -1;
-        }
-        else if(o1.getAge()==o2.getAge()){
-            return 1;
-        }
-
-        return 0;
     }
 
     // создайте toString

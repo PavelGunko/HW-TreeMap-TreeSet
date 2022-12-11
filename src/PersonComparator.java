@@ -1,19 +1,20 @@
+import java.util.Collections;
 import java.util.Comparator;
 
-public class PersonComparator implements Comparator<Person> {
+public class PersonComparator<PersonComparator> implements Comparator<Person> {
+
 
     @Override
     public int compare(Person o1, Person o2) {
-        int len1 = o1.getSurname().length();
-        int len2 = o2.getSurname().length();
+        String[] subSurname1 = o1.getSurname().split(" ");
+        int quantity1 = subSurname1.length;
+        String[] subSurname2 = o2.getSurname().split(" ");
+        int quantity2 = subSurname2.length;
+        if (quantity1 == quantity2) {
+            return o2.getAge() - o1.getAge();
 
-        if (len1 > len2) {
-            return -1;
-        } else if (len1 < len2) {
-            return 1;
-        } else {
-            return Integer.compare(o2.getAge(), o1.getAge());
         }
+        return quantity2 - quantity1;
     }
 }
 
